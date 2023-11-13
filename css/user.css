@@ -1,0 +1,75 @@
+#main-entrar{
+	height: 100vh;
+	min-height: 500px;
+}
+#logo{
+	position: relative;
+	display: block;
+	width: 45px;
+	height: 40px;
+	margin: 5px;
+}
+#logo>img{
+	position: relative;
+	display: block;
+	width: 100%;
+	border-radius: 10px;
+}
+#entrar{
+	position: absolute;
+	width: 100%;
+	max-width: 400px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 1rem;
+}
+#entrar form{
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	background-color: #ffef00;
+	padding: .5rem 1rem;
+	border-radius: 1rem;
+}
+#entrar form input, #entrar form select{
+	position: relative;
+	padding: .8rem;
+	margin-top: 1rem;
+	background-color: rgba(0, 0, 0, .3);
+	border: 0;
+}
+label{
+	color: #333;
+}
+#recordar{
+	#ffe;
+}
+#entrar form button{
+	position: relative;
+	padding: 1rem;
+	margin: 1rem 0;
+	color: #ffef00;
+	background-color: #111;
+	border: 0;
+	border-radius: 10px	;
+}
+
+#main-entrar form div{
+	padding: 5px;
+}
+
+#main-entrar form p{
+	color: #111;
+	text-align: justify;
+	padding: 5px 0px	;
+}
+#main-entrar p{
+	display: block;
+	text-align: center;
+	padding: 5px;
+}
+#main-entrar p a{
+	padding: 5px 2px;
+}

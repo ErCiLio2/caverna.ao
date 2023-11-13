@@ -1,0 +1,52 @@
+    #corpo_gerenciar_produtos{
+        position: relative;
+        display: block;
+        overflow: auto;
+    }
+    table{
+        position: relative;
+        overflow: auto;
+        padding: 0;
+        width: 100%;
+    }
+    td{
+        vertical-align: middle;
+    }
+
+    thead{
+        background-color: #331; 
+        color: #dede8f;
+    }
+
+    .corpo_gerenciar_produtos td{
+        padding: 8px 5px;
+    }
+    .col_alterar{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col_alterar>a{
+        flex: 1 1 7%;
+    }
+    .corpo_gerenciar_produtos .col>a{
+        position: relative;
+        font-size: 1rem;
+        padding: 3px 5px;
+        text-align: center;
+    }
+
+    .corpo_gerenciar_produtos .ft_tb_produto td{
+        background-color: #331; 
+        color: #dede8f;
+        grid-template-columns: repeat(2,1fr);
+        
+        padding: 8px 5px;
+    }.corpo_gerenciar_produtos .ft_tb_produto .col>a{
+        background-color: #331; 
+        color: #57f015;
+        width: 180px;
+    }
+
+    .cadastrar_Produtos textarea{
+        resize: vertical;
+    }

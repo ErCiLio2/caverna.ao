@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  
+    <!-- Add Google map API source -->
+    <script src = 
+        "https://maps.googleapis.com/maps/api/js">
+    </script>
+         
+    <script>
+        function GFG() {
+            var CustomOp = {
+                center:new google.maps.LatLng(-8.842419, 13.272645),
+                zoom:17, 
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+               
+            // Map object
+            var map = new google.maps.Map(
+                document.getElementById("DivID"),
+                CustomOp
+            );
+        }
+    </script>
+</head>
+  
+<!-- Function that execute when page load -->
+<body >
+    <div onload = "GFG()">
+        <h1 style="color:green">
+            GeeksforGeeks
+        </h1>
+          
+        <h3>Google Maps</h3>
+          
+        <!-- Basic Container -->
+        <div id = "DivID" style = 
+            "width:100%; height:600px;max-width: 12  00px;">
+        </div>
+    </div>
+</body>
+      
+</html>
