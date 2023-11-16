@@ -16,25 +16,27 @@
     <?php 
             
             $produtos = Produtos::Produtos();
-            foreach ($produtos as $produto){
-            #var_dump($produto['prduto_fotos'] );    
-            $produto['prduto_fotos'] = $string = substr($produto['prduto_fotos'], 2, -2 ); 
-            $fotoProduto = explode(',',$produto['prduto_fotos'] );
-            foreach($fotoProduto as $key => $foto){
-                $fotoProduto[$key] = substr($foto, 1, -1 );
-               # var_dump($fotoProduto);
-            }?>
+            if(!empty($produtos))
+            for ($cod=0; $cod < count($produtos); $cod++) {
+                $produto = $produtos[$cod];
+                #var_dump($produto['prduto_fotos'] );    
+                $produto['produto_fotos'] = $string = substr($produto['produto_fotos'], 2, -2 ); 
+                $fotoProduto = explode(',',$produto['produto_fotos'] );
+                foreach($fotoProduto as $key => $foto){
+                    $fotoProduto[$key] = substr($foto, 1, -1 );
+                # var_dump($fotoProduto);
+                }?>
                 
             <tr class="lin_tb">
                 
-                <td class="col"><?=$produto['prduto_id']?></td>
-                <td class="col"><?=$produto['prduto_nome']?></td>
-                <td class="col"><?=$produto['prduto_preco']?>kz</td>
+                <td class="col"><?=$produto['produto_id']?></td>
+                <td class="col"><?=$produto['produto_nome']?></td>
+                <td class="col"><?=$produto['produto_preco']?>kz</td>
                 <td class="col"><img src="<?=BASE_URL.$fotoProduto[0]?>" alt="<?=$fotoProduto[0]?>"></td>
-                <td class="col"><?=$produto['prduto_descricao']?></td>
-                <td class="col"><?=$produto['prduto_iva']?></td>
+                <td class="col"><?=$produto['produto_descricao']?></td>
+                <td class="col"><?=$produto['produto_iva']?></td>
                 <td class="col">Desconto</td>
-                <td class="col"><?=$produto['prduto_qtd']?></td>
+                <td class="col"><?=$produto['produto_qtd']?></td>
                 <td class="col col_alterar">
                     <a href="#alterar">Editar</a>
                     <a href="#apagar">Actualizar</a>

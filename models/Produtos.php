@@ -6,7 +6,7 @@
     {
         public static function Produtos()
 		{
-			$Sql= MySql::conectar()->prepare(" SELECT * from prdutos where 1");
+			$Sql= MySql::conectar()->prepare(" SELECT * from produtos where 1");
 
 			$Sql->execute();
 
@@ -18,23 +18,31 @@
 			}
 		}
 
-        public static function cadastrarProduto($dados)
+        public static function cadastrarProduto($produto)
 		{
 
-			$nome = $dados['usernome'];
-			$ssnome = $dados['usersobrenome'];
-			$mail = $dados['useremail'];
-			$tel = $dados['usertel'];
-			$sexo = $dados['usersexo'];
-			$ppasse = $dados['palavrapas5'];
-			$data = $dados['userdata'];
+			$nome		= 	$produto['novo_nomeProduto'];
+			$descricao 	=	$produto['novo_descricaoProduto'];
+			$fotos 		=	$produto['novo_fotoProduto'];
+			$cor		=	$produto["novo_corProduto"];
+			$genero		=	$produto["novo_generoProduto"];
+			$categoria	=	$produto["novo_catgoriaProduto"];
+			$valor 		=	$produto['novo_valorProduto'];
+			$iva 		=	$produto['novo_ivaProduto'];
+			$quant 		=	$produto['novo_QuantidadeProduto'];
 
-			$Sql= MySql::conectar()->prepare("INSERT into prdutos VALUES(?,?,?,?,?,?,?,?)");
+			
+			if(empty($nome))	echo $nome;
+			if(empty($descricao))	echo $descricao;
+			if(empty($fotos))	var_dump($fotos);
 
-			$Sql->execute(array(date('sth'), $nome, $ssnome, $mail, $tel, $sexo, $ppasse, $data));
+			$Sql= MySql::conectar()->prepare("INSERT into produtos VALUES(?,?,?,?,?,?,?,?,?,?,?,null)");
+
+			$Sql->execute(array(date('sth'), $nome, $valor, $descricao, $iva, $quant, $cor, $fotos, $categoria, $genero, date("Y-m-d")));
 
 			if ($Sql){
-				var_dump($Sql);
+				//var_dump($Sql);
+				return $nome;
 			}
 			else{
 				return 0;
@@ -46,7 +54,7 @@
                 $nome = $dados['id'];
                 $nome = $dados['nome'];
 
-                $Sql= MySql::conectar()->prepare("DELETE FROM `prdutos` WHERE prduto_id = ? and prduto_nome = ?;");
+                $Sql= MySql::conectar()->prepare("DELETE FROM `produtos` WHERE prduto_id = ? and prduto_nome = ?;");
 
                 $Sql->execute(array($id, $nome));
 
