@@ -57,13 +57,12 @@
 
                     $_SESSION['dados']["palavrapas5"] = $_POST['pass2'];
                 
-                    $dados = $_SESSION['dados'];
-
-                    Usuarios::criarUsuario($dados);
+                    Usuarios::criarUsuario($_SESSION['dados']);
                 }
 
-                else{ 
-                    ?><script>alert("Palavra passe Errada");</script><?php 
+                else{ ?>
+                    <script>alert("Palavra passe Errada");</script>
+                <?php 
                 }
 
                 include_once("pages/user/finalizarcadastro.php");

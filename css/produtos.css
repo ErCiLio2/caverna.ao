@@ -50,3 +50,64 @@
     .cadastrar_Produtos textarea{
         resize: vertical;
     }
+    .del_produto{
+        color:#e74015;
+    }
+    .ed_prdto{
+        color:#47e015;
+    }
+    .col_alterar img{
+        width: 15px;
+        position: relative;
+        display: flex;
+    }
+
+    #delete_produto{
+        position:relative;
+        display:block;
+        max-width:500px;
+        margin:0 auto;
+        padding:1rem 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color:  rgb(239, 237, 235);
+        border-radius: .5rem;
+        font-weight: 600;
+    }
+    #delete_produto>div{
+        position:relative;
+        display:block;
+        margin:0 auto;
+        height:400px 
+    }
+
+    #delete_produto img{
+        margin-bottom: 5px;
+        max-height: 300px;
+    }
+    #delete_produto p{
+        padding: 3px 0;
+        overflow: hidden;
+        color: #111;
+    }
+
+    #delete_produto button{
+        position:relative;
+        display:block;
+        margin:.8rem auto;
+        width:100%;
+        padding:1rem 2%;
+        border-radius: 5px;
+        border: 0;
+    }
+    #delete_produto #confirmar{
+        color: #cc3009;
+        background-color: #111;
+    }
+    #delete_produto #canselar{
+        color: #111     /*#47e015;*/;   
+        background-color: rgb(136, 228, 145);
+    }
+
+
+    

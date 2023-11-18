@@ -10,8 +10,11 @@
 
 			$Sql->execute(array($em412, $palavrapas5));
 
-			if ($Sql->rowCount() >0){
-				$data = ["Usuario" => "Admin"];
+			if ($Sql->rowCount() > 0){
+				$dados = $Sql->fetchAll()[0];
+				var_dump($dados);
+				$data = ["Admin" => $dados[1]];
+				$_SESSION['Admin'] = $dados['admin_nome'];
 				return $data;
 			}
 			else{

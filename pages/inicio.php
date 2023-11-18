@@ -23,7 +23,6 @@
  
         </div><!-- produtos -->
     </section>
-
     <section class="conteudo">
         <div class="overlay"> 
             <div class="sidebar">
@@ -39,9 +38,16 @@
                     </ul>
                 </nav>
             </div>
-            <div class="banner">  
-                
-            </div>
+        </div>
+    </section>
+    <section>    
+        <div class=""> 
+            <p>2</p>
+            <p>2</p>
+            <p>2</p>
+            <p>2</p>
+            <p>2</p>
+            <p>2</p>
         </div>
     </section>
 

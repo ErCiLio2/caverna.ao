@@ -58,7 +58,7 @@
                 
                 for ($key=0; $key<count($ft_nome); $key++) {
                     $ext = strtolower(substr($ft_nome[$key],-4)); //Pegando extensão do arquivo
-                    $new_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
+                    $new_name = $_POST['input_nomeProduto'].date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
                     $dir = './img/uploads/'; //Diretório para uploads
                     sleep(1);
                     

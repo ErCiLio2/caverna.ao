@@ -5,7 +5,15 @@ footer {
     height: 60px;
     padding: 10px;
 }
-
+footer .copy{
+    color:#111;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 39px;
+}
 footer nav {
     width: 100%;
     position: relative;

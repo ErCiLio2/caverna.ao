@@ -3,15 +3,18 @@
 	<div>
 		<?php
 	
-	if(isset($_POST['entrar'])){
-		$em412 = $_POST["email"];
-		$palavrapas5 = $_POST["palavrapass"] ;
-		
-		$Sql = Usuarios::logarUsuario($em412, $palavrapas5);
-		var_dump($Sql);			
+			if(isset($_POST['entrar'])){
+				$em412 = $_POST["email"];
+				$palavrapas5 = $_POST["palavrapass"] ;
+				
+				$Sql = Usuarios::logarUsuario($em412, $palavrapas5);
+				
+				if($Sql != 0) header("Location: http://localhost/caverna.ao/");
+				else{?>
+					<script>alert("Email ou senha incorreto")</script>
+				<?php }
 
-	}
-
+			}
 ?>
 		<a href="<?= BASE_URL?>" id="logo">
 	        <img src="<?=BASE_URL?>img/ico-user.png" alt="">

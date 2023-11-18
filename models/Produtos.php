@@ -48,6 +48,21 @@
 				return 0;
 			}
 		}
+		public static function pesquisarProduto($id)
+		{
+			if(empty($id))	return 0;
+
+			$Sql= MySql::conectar()->prepare("SELECT * FROM produtos WHERE ? = produto_id");
+
+			$Sql->execute(	array( $id));
+
+			if ($Sql->rowCount() > 0){
+				return $Sql->fetchAll();
+			}else {
+				return 0;
+			}
+		}
+
         public static function apargarProduto($dados)
 		{
 			try {

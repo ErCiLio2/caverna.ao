@@ -38,8 +38,14 @@
                 <td class="col">Desconto</td>
                 <td class="col"><?=$produto['produto_qtd']?></td>
                 <td class="col col_alterar">
-                    <a href="editar?prod=<?=$produto['produto_id']?>">Editar</a>
-                    <a href="apagar?prod=<?=$produto['produto_id']?>">Eliminar</a>
+                    <a  class="ed_prdto" href="editar?prod=<?=$produto['produto_id']?>">
+                        <img src="<?=SRC_IMG?>_icon/edit.svg" alt="" srcset="">
+                        Editar
+                    </a>
+                    <a class="del_produto" href="apagar?prod=<?=$produto['produto_id']?>    ">
+                        <img src="<?=SRC_IMG?>_icon/delete.svg" alt="" srcset="">
+                        Eliminar
+                    </a>
                 </td>
             </tr>
     <?php }?>
