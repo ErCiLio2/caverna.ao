@@ -95,6 +95,3 @@
     </div>
 
 </main>
-<!--
-    INSERT INTO `prOdutos` (`prOduto_id`, `produto_nome`, `produto_preco`, `produto_descricao`, `produto_iva`, `produto_qtd`, `produto_cores`, `produto_fotos`, `produto_catg_id`, `produto_genero_id`, `produto_data`, `produto_atualiz`) VALUES (1, 'Adidas 360º', '25500.06', '', '1455.05', 20, '\"[\'Amerelo e Azul escuro\',]\"', '\"[\'img/Air-Jordan-XI-PNG.jpg\',\'img/48ab471o.png\']\"', 6, 'F', '2023-10-27', NULL), (2, 'Calsas', '12590.54', 'Calsas masculinas,tecido algodao 80%,', '10.00', 50, '\"[\'Preto\']\"', '\"[\'img/xvzuh30l.png\']\"', 3, 'M', '2023-11-08', NULL); 
--->
